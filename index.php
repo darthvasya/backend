@@ -26,7 +26,7 @@
    do{?>
      <div style="border-bottom: 2px solid green;">
            <h1>ID match: <?php echo $data['id_game'];?></h1>
-           <h2>Home team:<?php echo $data['name_home'];?>  -  <?php echo $data['name_gyest'];?> Gyest team: </h2>
+           <h1 class="bg-info"><?php echo $data['name_home']?>(id=<?php echo $data['id_home_team']?>) - <?php echo $data['name_gyest']?>(id=<?php echo $data['id_gyest_team']?>)</h1>
            <h3><a href="edit.php?id_game=<?php echo $data['id_game'];?>">Редактировать</a></h3>
      </div>
    <?php } while($data = mysql_fetch_assoc($result));?>

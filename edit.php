@@ -12,9 +12,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
   </head>
   <body>
-
-
-
 <?php
 
 $id_edit_game = $_GET['id_game'];
@@ -26,7 +23,10 @@ $row = mysql_fetch_array($result);
 if(isset($_POST['save']))
 {
   $home_scored_result = $_POST['home_scored'];
-  mysql_query("UPDATE desk SET home_goals='$home_scored_result' WHERE  id_game = '$id_edit_game' ");
+  $gyest_scored_result = $_POST['gyest_scored'];
+  mysql_query("UPDATE desk SET home_goals='$home_scored_result',
+                               gyest_goals='$gyest_scored_result'
+                               WHERE  id_game = '$id_edit_game' ");
 }
 mysql_close();
  ?>
@@ -47,16 +47,20 @@ mysql_close();
            <label for="title">Голы <?php echo $row['name_home']?></label>
            <input type="number" class="form-control" id="home_scored" placeholder="Enter" name="home_scored" value="<?php echo $row['home_goals']?>">
            <label for="title">Голы <?php echo $row['name_gyest']?></label>
-           <input type="number" class="form-control" id="gyest_scored" placeholder="Enter" name="gyestt_scored" value="<?php echo $row['gyest_goals']?>">
+           <input type="number" class="form-control" id="gyest_scored" placeholder="Enter" name="gyest_scored" value="<?php echo $row['gyest_goals']?>">
            <label for="title">Матч завершился? <?php echo $row['finish']?> (0 - нет, 1 - да)</label>
          </div>
        <button type="submit" class="btn btn-lg btn-primary pull-right" name="save"  >Изменить</button>
-       <button type="submit" class="btn btn-lg btn-primary pull-left" name="end" >Матч окончен!</button>
+       <button class="btn btn-lg pull-left" name="end" style="background-color: @gray;">
+         <a href="end.php?id_game=<?php echo $row['id_game'];?>">Матч окончен!</a>
+       </button>
      </form>
    </div>
    <div class="col-sm-2 col-xs-0 "></div>
 </div>
 </div>
+
+
 
  </body>
 </html>
