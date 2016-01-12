@@ -9,9 +9,10 @@
     <meta charset="utf-8">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="">
 <?php
 
 $id_edit_game = $_GET['id_game'];
@@ -41,7 +42,7 @@ mysql_close();
 </div>
 <div class="row" style="background-color: #5cb85c;">
   <div class="col-sm-2 col-xs-0 "></div>
-  <div class="col-sm-8 col-xs-12 ">
+  <div class="col-sm-8 col-xs-12 " >
     <form method="post" action="edit.php?id_game=<?php echo $id_edit_game; ?>" role="form" >
         <div class="form-group">
            <label for="title">Голы <?php echo $row['name_home']?></label>
@@ -50,17 +51,20 @@ mysql_close();
            <input type="number" class="form-control" id="gyest_scored" placeholder="Enter" name="gyest_scored" value="<?php echo $row['gyest_goals']?>">
            <label for="title">Матч завершился? <?php echo $row['finish']?> (0 - нет, 1 - да)</label>
          </div>
-       <button type="submit" class="btn btn-lg btn-primary pull-right" name="save"  >Изменить</button>
-       <button class="btn btn-lg pull-left" name="end" style="background-color: @gray;">
-         <a href="end.php?id_game=<?php echo $row['id_game'];?>">Матч окончен!</a>
-       </button>
+       <div  ng-init="visible='<?php echo $row['finish']; ?>'"  >
+         <h1 ng-if="visible==1">Матч завершен. Редактирование информации не возможно.
+           <a href="index.php">Перейти на главную страницу</a>
+         </h1>
+       </div>
+       <button ng-if="visible==0" type="submit" class="btn btn-lg btn-primary pull-right" name="save"  >Изменить</button>
+         <button ng-if="visible==0" class="btn btn-lg pull-left" name="end" style="background-color: @gray;">
+           <a href="end.php?id_game=<?php echo $row['id_game'];?>">Матч окончен!</a>
+         </button>
      </form>
    </div>
    <div class="col-sm-2 col-xs-0 "></div>
 </div>
 </div>
-
-
 
  </body>
 </html>

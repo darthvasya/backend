@@ -13,15 +13,9 @@
   </head>
   <body>
 
-
-
-
 <?php
    $result = mysql_query("SELECT *  FROM desk ORDER BY id_game") or die(mysql_error());
    $data = mysql_fetch_assoc($result);
-
-
-
 
    do{?>
      <div style="border-bottom: 2px solid green;">
@@ -30,12 +24,6 @@
            <h3><a href="edit.php?id_game=<?php echo $data['id_game'];?>">Редактировать</a></h3>
      </div>
    <?php } while($data = mysql_fetch_assoc($result));?>
-
-
-
-
-
-
 
  </body>
 </html>

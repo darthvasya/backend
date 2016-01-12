@@ -14,39 +14,51 @@
   <body>
     <?php
       $id_end_game = $_GET['id_game'];
+      //mysql_query("UPDATE statistic SET games_played = games_played + 1 WHERE  id_team = 1  ") or die(mysql_error());
       mysql_query("UPDATE desk SET finish = 1 WHERE  id_game = '$id_end_game' ") or die(mysql_error());
 
     ?>
-    <h1>Вы завершили матч под номером #<?php echo $id_end_game;?>, данные успешно сохранены в базу данных.</h1>
+    <h1>Вы завершили матч под номером #<?php echo $id_end_game;?>, данные успешно сохранены в базе данных.</h1>
     <h2><a href="edit.php?id_game=<?php echo $id_end_game?>">Нажмите сюда, что бы перейти на страницу матча</a></h2>
 
     <?php
+    //получение данных о матче
     $result = mysql_query("SELECT *  FROM desk WHERE id_game = '$id_end_game'") or die(mysql_error());
     $data = mysql_fetch_assoc($result);
 
-    $home_stat = mysql_query("SELECT * FROM statistic WHERE id_team = 3 ") or die(mysql_error());
-    $gyest_stat = mysql_query("SELECT * FROM statistic WHERE id_team = 4 ") or die(mysql_error());
-
-    $home_data = mysql_fetch_assoc($home_stat);
-    $gyest_data = mysql_fetch_assoc($gyest_stat);
-
-
-
-    $winner = "home";
+    //получение id команд участвовавших в игре
+    $id_home = $data['id_home_team'];
+    $id_gyest = $data['id_gyest_team'];
+    //количество забитых голов командами
     $home_goals = $data['home_goals'];
     $gyest_goals = $data['gyest_goals'];
+    //добавление командам по 1 игре в статистику
+    mysql_query("UPDATE statistic SET games_played = games_played + 1,
+                                       scored = scored + '$home_goals',
+                                       missed = missed + '$gyest_goals'
+                                       WHERE  id_team = '$id_home' ") or die(mysql_error());
+    mysql_query("UPDATE statistic SET games_played = games_played + 1,
+                                       scored = scored + '$gyest_goals',
+                                       missed = missed + '$home_goals'
+                                       WHERE  id_team = '$id_gyest' ") or die(mysql_error());
+    //определение результата матча
 
+    $winner = "home";
 
     if($home_goals > $gyest_goals)
     {
-
+        mysql_query("UPDATE statistic SET wins = wins + 1, points = points + 3 WHERE  id_team = '$id_home' ") or die(mysql_error());
+        mysql_query("UPDATE statistic SET loses = loses + 1 WHERE  id_team = '$id_gyest' ") or die(mysql_error());
         $winner = "home";
     }else if($home_goals == $gyest_goals){
         $winner = "draw";
+        mysql_query("UPDATE statistic SET draw = draw + 1, points = points + 1 WHERE  id_team = '$id_home' ") or die(mysql_error());
+        mysql_query("UPDATE statistic SET draw = draw + 1, points = points + 1 WHERE  id_team = '$id_gyest' ") or die(mysql_error());
 
     }else{
+        mysql_query("UPDATE statistic SET wins = wins + 1, points = points + 3 WHERE  id_team = '$id_gyest' ") or die(mysql_error());
+        mysql_query("UPDATE statistic SET loses = loses + 1 WHERE  id_team = '$id_home' ") or die(mysql_error());
         $winner = "gyest";
-         
     }
 
         do{?>
