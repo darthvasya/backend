@@ -35,11 +35,13 @@
     //добавление командам по 1 игре в статистику
     mysql_query("UPDATE statistic SET games_played = games_played + 1,
                                        scored = scored + '$home_goals',
-                                       missed = missed + '$gyest_goals'
+                                       missed = missed + '$gyest_goals',
+                                       diff = scored - missed
                                        WHERE  id_team = '$id_home' ") or die(mysql_error());
     mysql_query("UPDATE statistic SET games_played = games_played + 1,
                                        scored = scored + '$gyest_goals',
-                                       missed = missed + '$home_goals'
+                                       missed = missed + '$home_goals',
+                                       diff = scored - missed
                                        WHERE  id_team = '$id_gyest' ") or die(mysql_error());
     //определение результата матча
 

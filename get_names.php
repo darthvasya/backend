@@ -13,7 +13,7 @@ do{
     if ($outp != "") {$outp .= ",";}
     $outp .= '{"id":"'  . $data["id_team"] . '",';
     $outp .= '"name":"'   . $data["name_team"]        . '"}';
-  
+
 }while($data =  mysql_fetch_assoc($result)) ;
 $outp ='{"records":['.$outp.']}';
 mysql_close();
