@@ -9,10 +9,15 @@
     <meta charset="utf-8">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ 
   </head>
   <body ng-app="">
+
 <?php
 
 $id_edit_game = $_GET['id_game'];
@@ -58,7 +63,17 @@ mysql_close();
        </div>
        <button ng-if="visible==0" type="submit" class="btn btn-lg btn-primary pull-right" name="save"  >Изменить</button>
          <button ng-if="visible==0" class="btn btn-lg pull-left" name="end" style="background-color: @gray;">
-           <a href="end.php?id_game=<?php echo $row['id_game'];?>">Матч окончен!</a>
+           <a href="end.php?id_game=<?php echo $row['id_game'];?>" onclick="return confirmDelete();">Матч окончен!</a>
+             <script type="text/javascript">
+               function confirmDelete() {
+                   if (confirm("Вы подтверждаете?")) {
+                       return true;
+                   } else {
+                       return false;
+                   }
+               }
+             </script>
+
          </button>
      </form>
    </div>

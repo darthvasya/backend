@@ -11,5 +11,7 @@ app.controller('customersCtrl', function($scope, $http) {
     {
       $scope.stat = response.data.teams;
     });
- 
+
+   
+
 });

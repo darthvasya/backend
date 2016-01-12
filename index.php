@@ -13,7 +13,7 @@
  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
-  <script type="text/javascript" src="table_app.js"></script>
+  <script type="text/javascript" src="js/table_app.js"></script>
 <style media="screen">
   th, td{
     text-align: center;
@@ -26,7 +26,7 @@
     <ul class="nav nav-pills">
       <li class="active"><a href="#">Home admin</a></li>
       <li><a href="#">Sait</a></li>
-      <li><a href="#">Add match</a></li>
+      <li><a href="add_match.php">Add match</a></li>
       <li class="disabled"><a href="#">Disabled</a></li>
 
     </ul>
@@ -77,6 +77,7 @@
            <div class="jumbotron">
              <h1><?php echo $data['name_home']?> - <?php echo $data['name_gyest']?></h1>
              <p>ID match: <?php echo $data['id_game'];?></p>
+             <p>Дата проведения: <?php echo $data['date'];?></p>
              <p><a class="btn btn-primary btn-lg" href="edit.php?id_game=<?php echo $data['id_game'];?>">Learn more</a></p>
            </div>
          <?php }} while($data = mysql_fetch_assoc($result));?>
@@ -91,6 +92,7 @@
            <div class="jumbotron">
              <h1><?php echo $data['name_home']?> - <?php echo $data['name_gyest']?></h1>
              <p>ID match: <?php echo $data['id_game'];?></p>
+             <p>Дата проведения: <?php echo $data['date'];?></p>
              <p><a class="btn btn-primary btn-lg" href="edit.php?id_game=<?php echo $data['id_game'];?>">Learn more</a></p>
            </div>
          <?php }} while($data = mysql_fetch_assoc($result));?>
