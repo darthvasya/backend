@@ -24,9 +24,10 @@
   <body >
 
     <ul class="nav nav-pills">
-      <li class="active"><a href="#">Home admin</a></li>
+      <li class="active"><a href="index.php">Home admin</a></li>
       <li><a href="#">Sait</a></li>
       <li><a href="add_match.php">Add match</a></li>
+      <li><a href="image.php">Image</a></li>
       <li class="disabled"><a href="#">Disabled</a></li>
 
     </ul>

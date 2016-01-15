@@ -41,6 +41,7 @@
     <ul class="nav nav-pills">
       <li><a href="index.php">Home admin</a></li>
       <li><a href="#">Sait</a></li>
+      <li class="active"><a href="image.php">Image</a></li>
       <li  class="active"><a href="add_match.php">Add match</a></li>
     </ul>
 <?php
