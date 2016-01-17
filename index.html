@@ -161,8 +161,8 @@
            <div class="brick-layout">
               <div class="brick  link" style="background-color: yellow;">
                 <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test - 1">
-                  <h4>{{list[test-1].play}}</h4>
-                  <h4>{{list[test-1].play}}</h4>
+                  <h4 class="teams_top">{{list[test-1].play}}</h4>
+                  <h4 class="teams_bottom">{{list[test-1].play}}</h4>
                 </a>
 
                 <a class="btn-primary" ng-if="test==0"><h4>Просмотреть все расписание</h4></a>
@@ -179,8 +179,8 @@
               </div>
               <div class="brick  link" style="background-color: yellow;">
                 <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test + 1">
-                  <h4>{{list[test+1].play}}</h4>
-                  <h4>{{list[test+1].play}}</h4>
+                  <h4 class="teams_top">{{list[test+1].play}}</h4>
+                  <h4 class="teams_bottom">{{list[test+1].play}}</h4>
                 </a>
                 <a class="btn-primary" ng-if="test==list.length-1"><h4>Просмотреть все расписание</h4></a>
               </div>

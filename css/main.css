@@ -443,6 +443,7 @@ h2 {
 .inf {
   display: flex;
 
+<<<<<<< HEAD
   justify-content: space-between;
 }
 .first-match {
@@ -457,6 +458,16 @@ h2 {
   background-color: blue;
   opacity: 0.4;
 }
+=======
+.teams_top{
+  padding-top: 50px;
+}
+
+.teams_bottom{
+
+}
+
+>>>>>>> ce300edd1b0ce9fc306b8ca54e6acf82c53c27f7
 @media (max-width: 320px) {
   .brick {flex-basis:130px;}
 }
