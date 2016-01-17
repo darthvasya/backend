@@ -441,17 +441,16 @@ h2 {
     flex-basis:140px;
     margin: 5px;
 }
+
 .inf {
   display: flex;
   justify-content: space-between;
 }
-
 .first-match {
   text-align: center;
   background-color: yellow;
   width: 49%;
   opacity: 0.7;
-  height: 90%;
 }
 
 .second-match {
@@ -459,7 +458,7 @@ h2 {
   width: 49%;
   background-color: blue;
   opacity: 0.5;
-  height: 90%;
+
 }
 
 .teams_top{
@@ -482,12 +481,21 @@ h2 {
       flex-grow: 1;
   }
   .velosiped{display: none;}
+  .inf-two {
+    display: flex;
+    justify-content: space-between;
+  }
+  .inf-two h1{
+    font-size: 20px;
+  }
 }
 @media (max-width: 680px) {
   .inf h1{
     font-size: 20px;
   }
 }
+
+
 /***End flex***/
 
 
