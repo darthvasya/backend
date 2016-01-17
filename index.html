@@ -167,8 +167,15 @@
 
                 <a class="btn-primary" ng-if="test==0"><h4>Просмотреть все расписание</h4></a>
               </div>
-              <div class="brick   hide-block" style="background-color: orange;">
-               контент
+              <div class="brick   hide-block inf" >
+                <div class="first-match">
+                  <h1>{{list[test].play}}</h1>
+                  <p>{{list[test].schet}}</p>
+                </div>
+                <div class="second-match">
+                  <h1>{{list[test].play}}</h1>
+                  <p>{{list[test].schet}}</p>
+                </div>
               </div>
               <div class="brick  link" style="background-color: yellow;">
                 <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test + 1">
@@ -249,7 +256,7 @@
         <div class="guitar">
 					<img class="img-responsive" src="images/footbaler.png" alt="guitar">
 				</div>
-       
+
 			</div>
 		</div>
 	</section><!--/#news-->
