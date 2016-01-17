@@ -443,27 +443,27 @@ h2 {
 }
 .inf {
   display: flex;
-
   justify-content: space-between;
 }
+
 .first-match {
   text-align: center;
   background-color: yellow;
-  width: 48%;
-  opacity: 0.4;
+  width: 49%;
+  opacity: 0.7;
+  height: 90%;
 }
+
 .second-match {
   text-align: center;
-  width: 48%;
+  width: 49%;
   background-color: blue;
-  opacity: 0.4;
+  opacity: 0.5;
+  height: 90%;
 }
 
 .teams_top{
  padding-top: 50px;
-}
-
-.teams_bottom{
 }
 
 @media (max-width: 320px) {
