@@ -441,6 +441,14 @@ h2 {
     margin: 5px;
 }
 
+.teams_top{
+  padding-top: 50px;
+}
+
+.teams_bottom{
+
+}
+
 @media (max-width: 320px) {
   .brick {flex-basis:130px;}
 }
