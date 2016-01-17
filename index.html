@@ -167,12 +167,12 @@
 
                 <a class="btn-primary" ng-if="test==0"><h4>Просмотреть все расписание</h4></a>
               </div>
-              <div class="brick   hide-block inf" >
-                <div class="first-match">
+              <div  id="blockB" class="brick   hide-block inf brick-click"  >
+                <div class="first-match brick-click1">
                   <h1>{{list[test].play}}</h1>
                   <p>{{list[test].schet}}</p>
                 </div>
-                <div class="second-match">
+                <div class="second-match brick-click2">
                   <h1>{{list[test].play}}</h1>
                   <p>{{list[test].schet}}</p>
                 </div>
@@ -187,20 +187,22 @@
               <div class="brick  show-block velosiped" style="background-color: yellow;">
                  это велосипедный блок
               </div>
-              
-              <div class="brick  show-block inf-two" >
-                <div class="first-match">
+
+              <div class="brick  show-block inf-two " >
+                <div class="first-match brick-click1-r">
                   <h1>{{list[test].play}}</h1>
                   <p>{{list[test].schet}}</p>
                 </div>
-                <div class="second-match">
+                <div class="second-match brick-click2-r">
                   <h1>{{list[test].play}}</h1>
                   <p>{{list[test].schet}}</p>
                 </div>
               </div>
-              <div class="super">
+
+              <div id="#superB" class="super">
 
               </div>
+
           </div>
 
       </div>
@@ -410,6 +412,7 @@
         </div>
     </footer>
     <!--/#footer-->
+    <script type="text/javascript"src="js/toggle-panel.js"></script>
     <script type="text/javascript" src="js/proj.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script type="text/javascript" src="js/table_app.js"></script>

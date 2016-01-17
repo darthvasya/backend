@@ -399,6 +399,7 @@ h2 {
   background-color: #75B46E;
   position: relative;
   width: 100%;
+
 }
 /*
 .link a {
@@ -458,12 +459,44 @@ h2 {
   width: 49%;
   background-color: blue;
   opacity: 0.5;
-
 }
 
 .teams_top{
  padding-top: 50px;
 }
+.super{
+  margin-top: -5px;
+  margin-left: 11%;
+  height: 50px;
+  background-color: white;
+  width: 80%;
+  opacity: 0;
+  height: 0px;
+  transition: all 2s ease-in-out;
+
+}
+
+.show1{
+  display: block;
+  background-color: yellow;
+  opacity: 0.7;
+  height: 200px;
+}
+.show2{
+  display: block;
+  opacity: 0.5;
+  background-color: blue;
+  height: 200px;
+}
+@keyframes blockheight{
+  to{
+    .first-match{
+      height: 400px;
+    }
+  }
+}
+
+
 
 @media (max-width: 320px) {
   .brick {flex-basis:130px;}
