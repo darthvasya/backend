@@ -12,11 +12,15 @@
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
   <link rel="stylesheet" href="css/image-hover.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/btn.css" media="screen" title="no title" charset="utf-8">
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -45,9 +49,7 @@
 		                    <span class="icon-bar"></span>
 		                </button>
 		                <a class="navbar-brand" href="index.html">
-		                	<!--<img class="img-responsive" src="images/logo.png" alt="logo">-->
-                      <h1>Турнир</h1>
-
+		                	<img class="img-responsive" src="images/foot.png"  style="margin-left: 50px;" alt="logo">
 		                </a>
 		            </div>
 		            <div class="collapse navbar-collapse">
@@ -76,7 +78,7 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">
+					<img class="img-responsive" src="images/slider/fon1.jpg" alt="slider">
 					<div class="carousel-caption">
 						<h2>register for our next event </h2>
 						<h4>full event package only @$199</h4>
@@ -84,7 +86,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">
+					<img class="img-responsive" src="images/slider/fon8.jpg" alt="slider">
 					<div class="carousel-caption">
 						<h2>register for our next event </h2>
 						<h4>full event package only @$199</h4>
@@ -92,7 +94,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">
+					<img class="img-responsive" src="images/slider/buf.jpg" alt="slider">
 					<div class="carousel-caption">
 						<h2>register for our next event </h2>
 						<h4>full event package only @$199</h4>
@@ -145,46 +147,64 @@
     <div ng-controller="customersCtrl">
     <!--
          <div class="link  brick">
-           <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test - 1"><h2>{{list[test-1].play}}</h2></a>
+           <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test - 1"><h2>{{match[test-1].play}}</h2></a>
            <a class="btn-primary" ng-if="test==0">Просмотреть все расписание</a>
          </div>
 
          <div class="link brick ">
-           <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test + 1"><h2>{{list[test+1].play}}</h2></a>
-           <a class="btn-primary" ng-if="test==list.length-1">Просмотреть все расписание</a>
+           <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test + 1"><h2>{{match[test+1].play}}</h2></a>
+           <a class="btn-primary" ng-if="test==match.length-1">Просмотреть все расписание</a>
          </div>
 
           <div class=" about-content brick  " style="background: #cccccc;">
-             <h1>{{list[test].play}}</h1>
-             <p>{{list[test].schet}}</p>
+             <h1>{{match[test].play}}</h1>
+             <p>{{match[test].schet}}</p>
            </div>-->
-           <div class="brick-layout">
-              <div class="brick  link" style="background-color: yellow;">
-                <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test - 1">
-                  <h4 class="teams_top">{{list[test-1].play}}</h4>
-                  <h4 class="teams_bottom">{{list[test-1].play}}</h4>
-                </a>
+           <div class="brick-layout" >
+              <div class="brick  link"  >
+                <!--
+                <a class="btn-primary btn-hide" ng-hide="test==0" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test - 2">
+                  <h4 class="teams_top">{{match[test-1].play}}</h4>
+                  <h4 class="teams_bottom">{{match[test-2].play}}</h4>
+                </a>-->
 
-                <a class="btn-primary" ng-if="test==0"><h4>Просмотреть все расписание</h4></a>
+                <a class="button31" ng-hide="test==0" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test - 2"></a>
+                <!--
+                <a class="arrow-btn" ng-if="test==0">
+                    <img width="64" height="64" src="images/fast44.png" alt=""/>
+                </a>-->
+
+
               </div>
               <div  id="blockB" class="brick   hide-block inf brick-click"  >
                 <div class="first-match brick-click1">
-                  <h1>{{list[test].play}}</h1>
+                  <h1>{{list[test+1].play }}</h1>
                   <p>{{list[test].schet}}</p>
+                  <h3>Среда, 20 января</h3>
+                  <h4>18:00</h4>
+                  <img width="128" height="128" src="images/kybok.png" alt="" />
                 </div>
-                <div class="second-match brick-click2">
-                  <h1>{{list[test].play}}</h1>
-                  <p>{{list[test].schet}}</p>
+                <div class="second-match brick-click2" >
+                  <h1>{{list[test+1].play }}</h1>
+                  <p>{{list[test+1].schet}}</p>
+                  <h3>Среда, 20 января</h3>
+                  <h4>18:00</h4>
                 </div>
               </div>
-              <div class="brick  link" style="background-color: yellow;">
-                <a class="btn-primary" data-toggle="tab" ng-href="#tab{{test}}" ng-click="test = test + 1">
-                  <h4 class="teams_top">{{list[test+1].play}}</h4>
-                  <h4 class="teams_bottom">{{list[test+1].play}}</h4>
-                </a>
-                <a class="btn-primary" ng-if="test==list.length-1"><h4>Просмотреть все расписание</h4></a>
+              <div class="brick  link" >
+                <!--
+                <a  class="btn-primary" data-toggle="tab" ng-hide="test==match.length-1" ng-href="#tab{{test}}" ng-click="test = test + 2;">
+                  <h4  class="teams_top">{{match[test+2].play}}</h4>
+                  <h4    class="teams_bottom">{{match[test+3].play}}</h4>
+
+                </a>-->
+                <a class="button31 right" data-toggle="tab" ng-hide="test==match.length-1" ng-href="#tab{{test}}" ng-click="test = test + 2;" ></a>
+                <!--
+                <a  class="arrow-btn" ng-if="test==match.length-1" >
+                  <img width="64" height="64" src="images/arrow-blue.png" alt="" />
+                </a>-->
               </div>
-              <div class="brick  show-block velosiped" style="background-color: yellow;">
+              <div class="brick  show-block velosiped">
                  это велосипедный блок
               </div>
 
@@ -192,22 +212,68 @@
                 <div class="first-match brick-click1-r">
                   <h1>{{list[test].play}}</h1>
                   <p>{{list[test].schet}}</p>
+                  <h3>Среда, 20 января</h3>
+                  <h4>18:00</h4>
                 </div>
                 <div class="second-match brick-click2-r">
-                  <h1>{{list[test].play}}</h1>
-                  <p>{{list[test].schet}}</p>
+                  <h1>{{list[test+1].play }}</h1>
+                  <p>{{list[test+1].schet}}</p>
+                  <h3>Среда, 20 января</h3>
+                  <h4>18:00</h4>
                 </div>
               </div>
 
               <div id="#superB" class="super">
+                <div class="left-new-brick">
 
+                  <div class="match-text-left match-text  animated fadeInRight">
+                    <h3>lorem ipsun color dolar</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in .
+                    </p>
+                 </div>
+
+                 <div class="match-photo-left match-photo hide animated fadeInLeft">
+
+                   <img width="128" height="128" src="images/pole.png" alt="" />
+                   <img width="128" height="128" src="images/pole.png" alt="" />
+                   <img width="128" height="128" src="images/pole.png" alt="" />
+                   <img width="128" height="128" src="images/pole.png" alt="" />
+                   <img width="128" height="128" src="images/pole.png" alt="" />
+                   <img width="128" height="128" src="images/pole.png" alt="" />
+
+                 </div>
+                </div>
+
+                <div class="right-new-brick">
+                  <div class="match-photo-right  match-photo  animated fadeInRight">
+                      <img width="128" height="128" src="images/pole.png" alt="" />
+                      <img width="128" height="128" src="images/pole.png" alt="" />
+                      <img width="128" height="128" src="images/pole.png" alt="" />
+                      <img width="128" height="128" src="images/pole.png" alt="" />
+                      <img width="128" height="128" src="images/pole.png" alt="" />
+                      <img width="128" height="128" src="images/pole.png" alt="" />
+                  </div>
+                  <div class="match-text-right match-text hide animated fadeInLeft">
+                    <h3>lorem ipsun color dolar</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in .
+                    </p>
+                 </div>
+                </div>
+
+                <div  class="btn-up">
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                </div>
               </div>
 
           </div>
 
       </div>
 	</section><!--/#about-->
+<script type="text/javascript">
 
+</script>
 
 	<section id="news">
 		<div class="container">
@@ -267,7 +333,7 @@
 				</div>
 
         <div class="guitar">
-					<img class="img-responsive" src="images/footbaler.png" alt="guitar">
+					<img class="img-responsive" src="images/ronaldo.png" alt="guitar">
 				</div>
 
 			</div>
@@ -412,15 +478,14 @@
         </div>
     </footer>
     <!--/#footer-->
+
     <script type="text/javascript"src="js/toggle-panel.js"></script>
-    <script type="text/javascript" src="js/proj.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script type="text/javascript" src="js/table_app.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   	<script type="text/javascript" src="js/gmaps.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	  <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/jquery.parallax.js"></script>
     <script type="text/javascript" src="js/coundown-timer.js"></script>
     <script type="text/javascript" src="js/jquery.scrollTo.js"></script>

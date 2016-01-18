@@ -1,31 +1,39 @@
 var block = document.querySelector(".super");
 
-var button = document.querySelector(".brick-click1");
-button.addEventListener("click", function() {
-  block.classList.remove('show2');
-  block.classList.add('show1');
-});
+var match_text_left = document.querySelector(".match-text-left");
+var match_photo_left = document.querySelector(".match-photo-left");
 
-var button = document.querySelector(".brick-click2");
-button.addEventListener("click", function() {
-  block.classList.remove('show1');
-  block.classList.add('show2');
-});
-//for responsive
-var button = document.querySelector(".brick-click1-r");
-button.addEventListener("click", function() {
-  block.classList.remove('show2');
-  block.classList.add('show1');
-});
+var match_text_right = document.querySelector(".match-text-right");
+var match_photo_right = document.querySelector(".match-photo-right");
 
-var button = document.querySelector(".brick-click2-r");
-button.addEventListener("click", function() {
-  block.classList.remove('show1');
-  block.classList.add('show2');
-});
+var nigF = document.querySelector(".first-match");
+var nigS = document.querySelector(".second-match");
 
-var button = document.querySelector(".super");
-button.addEventListener("click", function() {
-  block.classList.remove('show1');
-  block.classList.remove('show2');
+$(document).ready(function() {
+        $('.second-match').bind('click', function() {
+          nigS.classList.remove('nigga');
+          block.classList.add('show2');
+          nigF.classList.add('nigga');
+          match_text_left.classList.add('hide');
+          match_photo_left.classList.remove('hide');
+          match_text_right.classList.remove('hide');
+          match_photo_right.classList.add('hide');
+         });
+
+        $('.first-match').bind('click', function() {
+          nigF.classList.remove('nigga');
+          block.classList.add('show1');
+          nigS.classList.add('nigga');
+          match_text_left.classList.remove('hide');
+          match_photo_left.classList.add('hide');
+          match_text_right.classList.add('hide');
+          match_photo_right.classList.remove('hide');
+         });
+
+         $('.btn-up').bind('click', function(){
+           block.classList.remove('show1');
+           block.classList.remove('show2');
+           nigS.classList.remove('nigga');
+           nigF.classList.remove('nigga');
+         });
 });

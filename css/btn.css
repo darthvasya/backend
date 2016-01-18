@@ -1,0 +1,48 @@
+.brick a.button31 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 5em;
+  height: 5em;
+  border-radius: 100%;
+  outline: none;
+  background: #ddd;
+  box-shadow: 0 1px rgba(0,0,0,.1) inset, 0 1px #fff;
+  transform: rotate(90deg);
+  margin-top: 35%;
+  margin-left: 20%;
+  border: 2px solid white;
+}
+.brick a.button31.right {
+  transform: rotate(270deg)
+}
+
+.brick a.button31:after, a.button31:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 7.5%;
+  left: -15%;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 10%;
+  margin: auto;
+  background: #999;
+  box-shadow: 0 1px rgba(0,0,0,.1) inset, 0 1px #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.brick a.button31:before {
+  left: 15%;
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+.brick a.button31:hover, a.button31:focus {
+  background: #1B7B98;
+  box-shadow: none;
+}
+.brick a.button31:hover:after, a.button31:hover:before {
+  background: #ddd;
+  box-shadow: none;
+}
