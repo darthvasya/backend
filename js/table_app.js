@@ -14,8 +14,19 @@ app.controller('customersCtrl', function($scope, $http) {
 
     $http.get("http://localhost/backend_tyrn/get_desk.php").then(function (response)
     {
-      $scope.desk = response.data.matches;
+      $scope.desk =  response.data;
     });
+
+
+
+
+
+
+
+
+
+
+
 
     var  myUrl= '#tab3';
   	$scope.test = 0;

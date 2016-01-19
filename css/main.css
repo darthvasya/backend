@@ -512,10 +512,12 @@ h2 {
   margin-left: 50%;
 }
 .show1, .show2 {
-    display: block;
+  display: block;
   height: 350px;
 }
-
+.gootbaler2 {
+  margin-top: 60%;
+}
 .right-new-brick,
 .left-new-brick {
   display: inline-block;
@@ -885,7 +887,7 @@ h2 {
 
 #footer {
   background-color: #212121;
-  background-image: url("../images/footer-bg.jpg");
+  /*background-image: url("../images/footer-bg.jpg");*/
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
