@@ -4,7 +4,7 @@ jQuery(function($) {'use strict',
 			date: "10 july 2017 12:00:00",
 			format: "on"
 		},
-		
+
 
 
 		function() {
@@ -76,8 +76,8 @@ jQuery(function($) {'use strict',
 
 	map = new GMaps({
 		el: '#gmap',
-		lat: 43.04446,
-		lng: -76.130791,
+		lat: 53.1488006,
+		lng: 27.0994833,
 		scrollwheel:false,
 		zoom: 16,
 		zoomControl : false,
@@ -90,8 +90,8 @@ jQuery(function($) {'use strict',
 
 	var image = 'images/map-icon.png';
 	map.addMarker({
-		lat: 43.04446,
-		lng: -76.130791,
+		lat: 53.1488122,
+		lng: 27.0995833,
 		icon: image,
 		animation: google.maps.Animation.DROP,
 		verticalAlign: 'bottom',

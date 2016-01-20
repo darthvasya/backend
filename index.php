@@ -21,11 +21,6 @@
     <script type="text/javascript" src="js/jquery.js"></script>
 
 
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -34,10 +29,10 @@
 			<div class="container">
 				<div class="header-top">
 					<div class="pull-right social-icons">
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-youtube"></i></a>
+						<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+						<a href="https://vk.com/fckopul" target="_blank"><i class="fa fa-vk"></i></a>
+						<a href="https://plus.google.com/u/0/105700847818906733766/about" target="_blank"><i class="fa fa-google-plus"></i></a>
+						<a href="https://www.youtube.com/channel/UCDq0V0hoyyU3eFH2VXvp8Dw" target="_blank"><i class="fa fa-youtube"></i></a>
 					</div>
 				</div>
 		        <div class="row">
@@ -58,7 +53,7 @@
 		                    <li class="scroll"><a href="#table">Таблица</a></li>
 		                    <li class="scroll"><a href="#about">Расписание</a></li>
 		                    <li class="scroll"><a href="#news">Новости</a></li>
-		                    <li class="no-scroll"><a href="#twitter">Команды</a></li>
+		                    <li class="no-scroll"><a href="#sponsor">Команды</a></li>
 		                  <!--  <li><a class="no-scroll" href="#" target="_blank">О нас</a></li> -->
 		                    <li class="scroll"><a href="#contact">Контакты</a></li>
 		                </ul>
@@ -80,25 +75,25 @@
 				<div class="item active">
 					<img class="img-responsive" src="images/slider/fon1.jpg" alt="slider">
 					<div class="carousel-caption">
-						<h2>register for our next event </h2>
-						<h4>full event package only @$199</h4>
-						<a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+						<h2>Добро пожаловать!</h2>
+						<h4>Турнир по мини-футболу г. Копыль</h4>
+						<a href="http://fckopyl.by/tyrnir/news_view.php?priority_new=3">Узнать подробнее<i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 				<div class="item">
 					<img class="img-responsive" src="images/slider/fon8.jpg" alt="slider">
 					<div class="carousel-caption">
-						<h2>register for our next event </h2>
-						<h4>full event package only @$199</h4>
-						<a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+						<h2>Чемпионы 2015</h2>
+						<h4>Команда СДЮШОР</h4>
+						<a href="http://fckopyl.by/tyrnir/news_view.php?priority_new=2">Узнать подробнее<i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 				<div class="item">
 					<img class="img-responsive" src="images/slider/buf.jpg" alt="slider">
 					<div class="carousel-caption">
-						<h2>register for our next event </h2>
-						<h4>full event package only @$199</h4>
-						<a href="#contact" >GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+						<h2>Первый матч!</h2>
+						<h4>Не забудь посетить</h4>
+						<a href="http://fckopyl.by/tyrnir/news_view.php?priority_new=0" >Узнать подробнее<i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -138,7 +133,7 @@
         </div>
 			</div>
 			<div class="cart">
-				<a href="#"><i class="glyphicon glyphicon-folder-open"></i> <span>История игр</span></a>
+				<a href="#" target="_blank"><i class="glyphicon glyphicon-folder-open"></i> <span>История игр</span></a>
 			</div>
 		</div>
 	</section><!--/#table-->
@@ -182,13 +177,14 @@
                   <p>{{desk[test].home_goals}} - {{desk[test].gyest_goals}}</p>
                   <h3>{{desk[test].date}}</h3>
                   <h4>Начало: {{desk[test].time}}</h4>
-                  <img width="128" height="128" src="images/kybok.png" alt="" />
+                  <img width="128" height="128" src="images/kubok12.png" alt="" />
                 </div>
                 <div class="second-match brick-click2" >
                   <h1>{{desk[test+1].name_home }}  - {{desk[test+1].name_gyest }}</h1>
                   <p>{{desk[test+1].home_goals}} - {{desk[test+1].gyest_goals}}</p>
                   <h3>{{desk[test+1].date}}</h3>
                   <h4>Начало: {{desk[test+1].time}}</h4>
+                  <img width="128" height="128" src="images/kubok13.png" alt="" />
                 </div>
               </div>
               <div class="brick  link" >
@@ -234,25 +230,27 @@
                  </div>
 
                  <div class="match-photo-left match-photo hide animated fadeInLeft">
-
+                   <!--
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
-
+                 -->
                  </div>
                 </div>
 
                 <div class="right-new-brick">
                   <div class="match-photo-right  match-photo  animated fadeInRight">
+                    <!--
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
+                    -->
                   </div>
                   <div class="match-text-right match-text hide animated fadeInLeft">
                     <h3>{{desk[test+1].name_home }} - {{desk[test+1].name_gyest }}</h3>
@@ -283,24 +281,26 @@
 						<h2 class="heading">ПОСЛЕДНИЕ НОВОСТИ </h2>
             <a class="even-control-left" href="#news-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
             <a class="even-control-right" href="#news-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
-						<div class="carousel-inner">
+						<div class="carousel-inner" ng-controller="customersCtrl">
 							<div class="item active">
 								<div class="row">
                   <div class="grid">
           					<figure class="effect-sadie">
-          						<img src="images/news/bg1.png" alt="img02"/>
+
+                      <img src="images/news/{{news[new].img}}" alt="Новсти. Фото. Img. Png."/>
           						<figcaption>
-          							<h2>Holy <span>Sadie</span></h2>
-          							<p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
-          							<a href="#">View more</a>
+          							<h2><span>{{news[new].title}}</span></h2>
+          							<p>{{news[new].title_text}}<br></p>
+          							<a ng-href="news_view.php?priority_new={{new}}" target="_blank">View more</a>
           						</figcaption>
           					</figure>
           					<figure class="effect-sadie">
-          						<img src="images/news/pole.png" alt="img14"/>
+          						  <img src="images/news/{{news[new+1].img}}" alt="Новсти. Фото. Img. Png."/>
           						<figcaption>
-          							<h2>Holy <span>Sadie</span></h2>
-          							<p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
-          							<a href="#">View more</a>
+          							<h2><span>{{news[new+1].title}}</span></h2>
+          							<p>{{news[new+1].title_text}}<br></p>
+          							<a ng-href="news_view.php?priority_new={{new+1}}" target="_blank">View more</a>
+
           						</figcaption>
           					</figure>
           				</div>
@@ -310,19 +310,19 @@
 								<div class="row">
                   <div class="grid">
                    <figure class="effect-sadie">
-                     <img src="images/news/pole.png" alt="img02"/>
+                       <img src="images/news/{{news[new+2].img}}" alt="Новсти. Фото. Img. Png."/>
                      <figcaption>
-                       <h2>Holy <span>Sadie</span></h2>
-                       <p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
-                       <a href="#">View more</a>
+                       <h2><span>{{news[new+2].title}}</span></h2>
+                       <p>{{news[new+2].title_text}}<br></p>
+                       <a ng-href="news_view.php?priority_new={{new+2}}" target="_blank">View more</a>
                      </figcaption>
                    </figure>
                    <figure class="effect-sadie">
-                     <img src="images/news/bg1.png" alt="img14"/>
+                       <img src="images/news/{{news[new+3].img}}" alt="Новсти. Фото. Img. Png."/>
                      <figcaption>
-                       <h2>Holy <span>Sadie</span></h2>
-                       <p>Sadie never took her eyes off me. <br>She had a dark soul.</p>
-                       <a href="#">View more</a>
+                       <h2><span>{{news[new+3].title}}</span></h2>
+                       <p>{{news[new+3].title_text}}<br></p>
+                       <a ng-href="news_view.php?priority_new={{new+3}}" target="_blank">View more</a>
                      </figcaption>
                    </figure>
                  </div>
@@ -342,8 +342,7 @@
 			</div>
 		</div>
 	</section><!--/#news-->
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<!--
   <section id="twitter">
 		<div id="twitter-feed" class="carousel slide" data-interval="false">
 			<div class="twit">
@@ -373,7 +372,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				</div>
 			</div>
 		</div>
-	</section><!--/#twitter-feed-->
+	</section>--><!--/#twitter-feed-->
 
 
 	<section id="sponsor">
@@ -381,31 +380,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-10">
-						<h2>Sponsors</h2>
-						<a class="sponsor-control-left" href="#sponsor-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-						<a class="sponsor-control-right" href="#sponsor-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
-						<div class="carousel-inner">
-							<div class="item active">
-								<ul>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor1.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor2.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor3.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor4.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor5.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor6.png" alt=""></a></li>
-								</ul>
-							</div>
-							<div class="item">
-								<ul>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor6.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor5.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor4.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor3.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor2.png" alt=""></a></li>
-									<li><a href="#"><img class="img-responsive" src="images/sponsor/sponsor1.png" alt=""></a></li>
-								</ul>
-							</div>
-						</div>
+						<h2>Команды участники:</h2>
+              <ul class="teams"  ng-controller="customersCtrl">
+                <li ng-repeat="team in names"><h3>{{team.name}}</h3></li>
+              </ul>
 					</div>
 				</div>
 			</div>
@@ -430,26 +408,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 				<div class="row">
 					<div class="col-sm-3 col-sm-offset-4">
 						<div class="contact-text">
-							<h3>Contact</h3>
+							<h3>Контакты</h3>
 							<address>
-								E-mail: promo@party.com<br>
-								Phone: +1 (123) 456 7890<br>
-								Fax: +1 (123) 456 7891
+								E-mail: fckopyl@gmail.com<br>
+								Kopyl<br>
+                Belarus
 							</address>
 						</div>
-						<div class="contact-address">
-							<h3>Contact</h3>
-							<address>
-								Unit C2, St.Vincent's Trading Est.,<br>
-								Feeder Road,<br>
-								Bristol, BS2 0UY<br>
-								United Kingdom
-							</address>
-						</div>
+
 					</div>
 					<div class="col-sm-5">
 						<div id="contact-section">
-							<h3>Send a message</h3>
+							<h3>Свяжитесь с нами</h3>
 					    	<div class="status alert alert-success" style="display: none"></div>
 					    	<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
 					            <div class="form-group">
@@ -476,14 +446,20 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     <footer id="footer">
         <div class="container">
             <div class="text-center">
-                <p> Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>
+              <script id="_wauw8h">var _wau = _wau || []; _wau.push(["small", "rn9nr091jieg", "w8h"]);
+                      (function() {var s=document.createElement("script"); s.async=true;
+                      s.src="http://widgets.amung.us/small.js";
+                      document.getElementsByTagName("head")[0].appendChild(s);
+                      })();</script>
+
+                <p> Copyright  &copy;2016 Kopyl</p>
             </div>
         </div>
     </footer>
     <!--/#footer-->
 
     <script type="text/javascript"src="js/toggle-panel.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
     <script type="text/javascript" src="js/table_app.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

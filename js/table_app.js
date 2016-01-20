@@ -2,21 +2,27 @@ var app = angular.module('myApp', []);
 
 app.controller('customersCtrl', function($scope, $http) {
 
-    $http.get("http://localhost/backend_tyrn/get_names.php").then(function (response)
+    $http.get("http://localhost/tyrnir/get_names.php").then(function (response)
     {
       $scope.names = response.data.records;
     });
 
-    $http.get("http://localhost/backend_tyrn/get_statistic.php").then(function (response)
+    $http.get("http://localhost/tyrnir/get_statistic.php").then(function (response)
     {
       $scope.stat = response.data.teams;
     });
 
-    $http.get("http://localhost/backend_tyrn/get_desk.php").then(function (response)
+    $http.get("http://localhost/tyrnir/get_desk.php").then(function (response)
     {
       $scope.desk =  response.data;
     });
 
+    $http.get("http://localhost/tyrnir/get_news.php").then(function (response)
+    {
+      $scope.news =  response.data;
+    });
+
+    $scope.new = 0;
 
 
 
