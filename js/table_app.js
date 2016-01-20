@@ -46,32 +46,15 @@ app.controller('customersCtrl', function($scope, $http) {
 					{ play: 'Arsenal - lester', schet: '29 - 0'},
 					{ play: 'Arsenal - FCKOPYL', schet: 'игра ещё не состоялась'}
 					];
+});
 
-  	$scope.list1 = [{"id_game":"1",
-                    "name_home":"Арсенал",
-                    "name_gyest":"Юность",
-                    "id_home_team":"1",
-                    "id_gyest_team":"2",
-                    "date":"2016-01-29",
-                    "time":"18.00",
-                    "home_goals":"12",
-                    "gyest_goals":"4",
-                    "game_description":"x",
-                    "finish":"1"},
+app.directive('parseStyle', function($interpolate) {
+    return function(scope, elem) {
+        var exp = $interpolate(elem.html()),
+            watchFunc = function () { return exp(scope); };
 
-
-
-                    {"id_game":"8",
-                    "name_home":"Арсенал",
-                    "name_gyest":"Пром Сити",
-                    "id_home_team":"1",
-                    "id_gyest_team":"6",
-                    "date":"0000-00-00",
-                    "time":"18.00",
-                    "home_goals":"0",
-                    "gyest_goals":"0",
-                    "game_description":"x",
-                    "finish":"1"}];
-
-
+        scope.$watch(watchFunc, function (html) {
+            elem.html(html);
+        });
+    };
 });

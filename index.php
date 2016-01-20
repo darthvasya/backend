@@ -21,6 +21,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
 
 
+
 </head><!--/head-->
 
 <body>
@@ -43,7 +44,7 @@
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-		                <a class="navbar-brand" href="index.html">
+		                <a class="navbar-brand" href="index.php">
 		                	<img class="img-responsive" src="images/foot.png"  style="margin-left: 50px;" alt="logo">
 		                </a>
 		            </div>
@@ -125,8 +126,8 @@
                <td>{{x.missed}}</td>
                <td>{{x.diff}}</td>
                <td>{{x.wins}}</td>
-               <td>{{x.loses}}</td>
                <td>{{x.draw}}</td>
+               <td>{{x.loses}}</td>
                <td>{{x.points}}</td>
             </tr>
           </table>
@@ -229,28 +230,34 @@
                     </p>
                  </div>
 
-                 <div class="match-photo-left match-photo hide animated fadeInLeft">
+                 <div ng-show="desk[test+1].foto==1" class="match-photo-left match-photo hide animated fadeInLeft">
+
                    <!--
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
+
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
                    <img width="128" height="128" src="images/pole.png" alt="" />
-                 -->
+                   -->
+                   <img width="128" height="128" src="images/news/1_1.jpg" alt="" />
+                   <img width="128" height="128" src="images/news/1_2.jpg" alt="" />
+                   <img width="128" height="128" src="images/news/1_3.jpg" alt="" />
                  </div>
                 </div>
 
                 <div class="right-new-brick">
-                  <div class="match-photo-right  match-photo  animated fadeInRight">
+                  <div ng-show="desk[test].foto==1" class="match-photo-right  match-photo  animated fadeInRight">
                     <!--
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
                       <img width="128" height="128" src="images/pole.png" alt="" />
-                      <img width="128" height="128" src="images/pole.png" alt="" />
-                      <img width="128" height="128" src="images/pole.png" alt="" />
-                      <img width="128" height="128" src="images/pole.png" alt="" />
-                    -->
+                      -->
+                      <img width="128" height="128" src="images/news/1_1.jpg" alt="" />
+                      <img width="128" height="128" src="images/news/1_2.jpg" alt="" />
+                      <img width="128" height="128" src="images/news/1_3.jpg" alt="" />
+
                   </div>
                   <div class="match-text-right match-text hide animated fadeInLeft">
                     <h3>{{desk[test+1].name_home }} - {{desk[test+1].name_gyest }}</h3>
@@ -274,73 +281,105 @@
 </script>
 
 	<section id="news">
+    <div class="tribuna ">
+
+    </div>
+
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-md-9 col-xs-12">
+				<div class="col-sm-12 col-md-12 col-xs-12">
 					<div id="news-carousel" class="carousel slide" data-interval="false">
 						<h2 class="heading">ПОСЛЕДНИЕ НОВОСТИ </h2>
             <a class="even-control-left" href="#news-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
             <a class="even-control-right" href="#news-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
 						<div class="carousel-inner" ng-controller="customersCtrl">
 							<div class="item active">
-								<div class="row">
-                  <div class="grid">
-          					<figure class="effect-sadie">
 
-                      <img src="images/news/{{news[new].img}}" alt="Новсти. Фото. Img. Png."/>
-          						<figcaption>
-          							<h2><span>{{news[new].title}}</span></h2>
-          							<p>{{news[new].title_text}}<br></p>
-          							<a ng-href="news_view.php?priority_new={{new}}" target="_blank">View more</a>
-          						</figcaption>
-          					</figure>
-          					<figure class="effect-sadie">
-          						  <img src="images/news/{{news[new+1].img}}" alt="Новсти. Фото. Img. Png."/>
-          						<figcaption>
-          							<h2><span>{{news[new+1].title}}</span></h2>
-          							<p>{{news[new+1].title_text}}<br></p>
-          							<a ng-href="news_view.php?priority_new={{new+1}}" target="_blank">View more</a>
 
-          						</figcaption>
-          					</figure>
-          				</div>
-								</div>
+
+
+                <!--background-image: url('images/news/{{news[new].img}}');-->
+                <div class="col-sm-12 col-md-6 col-xs-12">
+                  <div class="jumbotron new-block jumbotron-first"
+                  >
+                  <style parse-style>
+                    .jumbotron-first{
+                     background-image: url('images/news/{{news[new].img}}');
+                     background-position: 50% 50%;
+                     background-size: cover;
+                    }
+                  </style>
+                    <h1>{{news[new].title}}</h1>
+                    <p>{{news[new].title_text}}</p>
+                    <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new}}" role="button">Подробнее</a></p>
+                  </div>
+               </div>
+
+               <div class="col-sm-12 col-md-6 col-xs-12">
+                 <div class="jumbotron new-block jumbotron-second"
+                 >
+                 <style parse-style>
+                   .jumbotron-second{
+                    background-image: url('images/news/{{news[new+1].img}}');
+                    background-position: 50% 50%;
+                    background-size: cover;
+                   }
+                 </style>
+                   <h1>{{news[new+1].title}}</h1>
+                   <p>{{news[new+1].title_text}}</p>
+                   <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+1}}" role="button">Подробнее</a></p>
+                 </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-xs-12">
+                <div class="jumbotron new-block jumbotron-third"
+                >
+                <style parse-style>
+                  .jumbotron-third{
+                   background-image: url('images/news/{{news[new+2].img}}');
+                   background-position: 50% 50%;
+                   background-size: cover;
+                  }
+                </style>
+                  <h1>{{news[new+2].title}}</h1>
+                  <p>{{news[new+2].title_text}}</p>
+                  <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+2}}" role="button">Подробнее</a></p>
+                </div>
+             </div>
+
+             <div class="col-sm-12 col-md-6 col-xs-12">
+               <div class="jumbotron new-block jumbotron-fourth"
+               >
+               <style parse-style>
+                 .jumbotron-fourth{
+                  background-image: url('images/news/{{news[new+3].img}}');
+                  background-position: 50% 50%;
+                  background-size: cover;
+                 }
+               </style>
+                 <h1>{{news[new+3].title}}</h1>
+                 <p>{{news[new+3].title_text}}</p>
+                 <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+3}}" role="button">Подробнее</a></p>
+               </div>
+            </div>
+
+
+
+
 							</div>
 							<div class="item">
-								<div class="row">
-                  <div class="grid">
-                   <figure class="effect-sadie">
-                       <img src="images/news/{{news[new+2].img}}" alt="Новсти. Фото. Img. Png."/>
-                     <figcaption>
-                       <h2><span>{{news[new+2].title}}</span></h2>
-                       <p>{{news[new+2].title_text}}<br></p>
-                       <a ng-href="news_view.php?priority_new={{new+2}}" target="_blank">View more</a>
-                     </figcaption>
-                   </figure>
-                   <figure class="effect-sadie">
-                       <img src="images/news/{{news[new+3].img}}" alt="Новсти. Фото. Img. Png."/>
-                     <figcaption>
-                       <h2><span>{{news[new+3].title}}</span></h2>
-                       <p>{{news[new+3].title_text}}<br></p>
-                       <a ng-href="news_view.php?priority_new={{new+3}}" target="_blank">View more</a>
-                     </figcaption>
-                   </figure>
-                 </div>
-								</div>
+
 							</div>
 						</div>
 					</div>
 				</div>
 
-        <div class="guitar">
-					<img class="img-responsive" width="390px;" src="images/var1.png" alt="guitar">
-				</div>
-        <div class="guitar gootbaler2">
-          <img class="img-responsive" width="400px;" src="images/foot2.png" alt="guitar">
-        </div>
-
 			</div>
 		</div>
+
+    <div class="tribuna tribuna-bottom">
+
+    </div>
 	</section><!--/#news-->
 <!--
   <section id="twitter">
@@ -392,6 +431,21 @@
 			</div>
 		</div>
 	</section><!--/#sponsor-->
+
+  <section>
+  <!--reklama-->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- main -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5685645872334738"
+       data-ad-slot="6822502801"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  </section>
+
 
 	<section id="contact">
 		<div id="map">
@@ -451,6 +505,17 @@
                       s.src="http://widgets.amung.us/small.js";
                       document.getElementsByTagName("head")[0].appendChild(s);
                       })();</script>
+                      <script>
+                      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                      ga('create', 'UA-65755100-1', 'auto');
+                      ga('send', 'pageview');
+
+                      </script>
+
 
                 <p> Copyright  &copy;2016 Kopyl</p>
             </div>
