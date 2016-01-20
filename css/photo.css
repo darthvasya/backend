@@ -295,6 +295,74 @@ h2 {
   margin-left: 5%;
   width: 90%;
 }
+
+
+
+
+
+
+#photo{
+  background-color: #546e7a;
+  /*background-image: url("../images/prozr.png");*/
+  background-position: 50% 0;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+}
+#photo .first-photo-folder{
+  border-radius: 0px;
+  height: 400px;
+  background-color: #000;
+  background-image: url(../images/slider/buf.jpg);
+}
+#photo .first1-row-photo-folder{
+  height: 200px;
+  background-color: #890;
+  background-image: url(../images/fotbs.png);
+}
+#photo .first2-row-photo-folder{
+  height: 200px;
+  background-color: #690;
+  background-image: url(../images/cat1.png);
+}
+#photo .first3-row-photo-folder{
+  height: 200px;
+  background-color: #860;
+}
+#photo .first4-row-photo-folder{
+  height: 200px;
+  background-color: #190;
+}
+#photo .others1-photo-folder{
+  height: 200px;
+  background-color: #190;
+}
+#photo .others2-photo-folder{
+  height: 200px;
+  background-color: #790;
+}
+#photo .others3-photo-folder{
+  height: 200px;
+  background-color: #450;
+}
+#photo .others4-photo-folder{
+  height: 200px;
+  background-color: #340;
+}
+@media (max-width: 680px) {
+.inf h1{
+font-size: 20px;
+}
+}
+#photo .match-photo-name p{
+  height: 30%;
+  margin-top: 60%;
+  background: rgba(1, 1, 1, 0.5);
+  padding: 0;
+}
+
+
+
 /*************************
 ******Footer CSS****
 **************************/

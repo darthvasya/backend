@@ -232,31 +232,24 @@
 
                  <div ng-show="desk[test+1].foto==1" class="match-photo-left match-photo hide animated fadeInLeft">
 
-                   <!--
-                   <img width="128" height="128" src="images/pole.png" alt="" />
-                   <img width="128" height="128" src="images/pole.png" alt="" />
-                   <img width="128" height="128" src="images/pole.png" alt="" />
-
-                   <img width="128" height="128" src="images/pole.png" alt="" />
-                   <img width="128" height="128" src="images/pole.png" alt="" />
-                   <img width="128" height="128" src="images/pole.png" alt="" />
-                   -->
                    <img width="128" height="128" src="images/news/1_1.jpg" alt="" />
                    <img width="128" height="128" src="images/news/1_2.jpg" alt="" />
                    <img width="128" height="128" src="images/news/1_3.jpg" alt="" />
+                   <img width="128" height="128" src="images/news/1_4.jpg" alt="" />
+                   <img width="128" height="128" src="images/news/1_5.jpg" alt="" />
+                   <img width="128" height="128" src="images/news/1_6.jpg" alt="" />
                  </div>
                 </div>
 
                 <div class="right-new-brick">
                   <div ng-show="desk[test].foto==1" class="match-photo-right  match-photo  animated fadeInRight">
-                    <!--
-                      <img width="128" height="128" src="images/pole.png" alt="" />
-                      <img width="128" height="128" src="images/pole.png" alt="" />
-                      <img width="128" height="128" src="images/pole.png" alt="" />
-                      -->
                       <img width="128" height="128" src="images/news/1_1.jpg" alt="" />
                       <img width="128" height="128" src="images/news/1_2.jpg" alt="" />
                       <img width="128" height="128" src="images/news/1_3.jpg" alt="" />
+                      <img width="128" height="128" src="images/news/1_4.jpg" alt="" />
+                      <img width="128" height="128" src="images/news/1_5.jpg" alt="" />
+                      <img width="128" height="128" src="images/news/1_6.jpg" alt="" />
+
 
                   </div>
                   <div class="match-text-right match-text hide animated fadeInLeft">

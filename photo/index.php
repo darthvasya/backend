@@ -10,7 +10,7 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
 	<link href="../css/animate.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+	<link href="../css/responsive.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/image-hover.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="../css/btn.css" media="screen" title="no title" charset="utf-8">
 
@@ -111,10 +111,52 @@
 
   <section id="photo">
     <div class="container">
-        <article class="news-body">
-          <h1 style="color: black;">Дарова</h1>
-        </article>
-      </div>
+    	<div class="row">
+			<div class="col-sm-12 col-md-12 col-xs-12">
+       			 <article class="news-body">
+          			<div class="col-sm-12 col-md-12 col-xs-12">
+          				<div class="col-sm-12 col-md-6 col-xs-12 first-photo-folder">
+							<div class="match-photo-name">
+								<p>Метеор - Говноклуб</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 first1-row-photo-folder">
+							<div class="match-photo-name">
+								<p>Метеор - Бичи</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 first2-row-photo-folder">
+							<div class="match-photo-name">
+								<p>Бичи - Говноклуб</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 first3-row-photo-folder">
+
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 first4-row-photo-folder">
+
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12 col-xs-12">
+						<div class="col-sm-6 col-md-3 col-xs-6 others1-photo-folder">
+
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 others2-photo-folder">
+
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 others3-photo-folder">
+
+						</div>
+						<div class="col-sm-6 col-md-3 col-xs-6 others4-photo-folder">
+
+						</div>
+
+					</div>
+
+          		 </article>
+          	</div>
+        </div>
+    </div>
   </section>
 
 
@@ -138,10 +180,8 @@
                       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
                       ga('create', 'UA-65755100-1', 'auto');
                       ga('send', 'pageview');
-
                       </script>
 
 
