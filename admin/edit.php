@@ -3,6 +3,7 @@
   mysql_select_db("tyrnir", $connect) or die(mysql_error()	);
   mysql_query('SET NAMES utf8');
 ?>
+
 <!DOCTYPE html>
 <html  ng-app>
   <head>
@@ -12,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body >
 
@@ -26,7 +27,7 @@
     <?php
 
     $id_edit_game = $_GET['id_game'];
-
+    echo $id_edit_game;
     $result = mysql_query("SELECT * FROM desk WHERE  id_game = '$id_edit_game' ") or die(mysql_error());
     $row = mysql_fetch_array($result);
 
@@ -59,9 +60,11 @@
                <input type="number" class="form-control" id="home_scored" placeholder="Enter" name="home_scored" value="<?php echo $row['home_goals']?>">
                <label for="title">Голы <?php echo $row['name_gyest']?></label>
                <input type="number" class="form-control" id="gyest_scored" placeholder="Enter" name="gyest_scored" value="<?php echo $row['gyest_goals']?>">
-               <label for="title">Матч завершился? <?php echo $row['finish']?> (0 - нет, 1 - да)</label>
+
+<label for="title">Матч завершился? <?php echo   $row['finish']; ?> (0 - нет, 1 - да)</label>
              </div>
-           <div  ng-init="visible='<?php echo $row['finish']; ?>'"  >
+
+           <div  ng-init="visible='<?php echo "sad" + $row['finish']; ?>'"  >
              <h1 ng-if="visible==1">Матч завершен. Редактирование информации не возможно.
                <a href="index.php">Перейти на главную страницу</a>
              </h1>

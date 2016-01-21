@@ -361,7 +361,66 @@
 
 							</div>
 							<div class="item">
-
+                <div class="col-sm-12 col-md-6 col-xs-12">
+                  <div class="jumbotron new-block jumbotron-5"
+                  >
+                  <style parse-style>
+                    .jumbotron-5{
+                     background-image: url('images/news/{{news[new+4].img}}');
+                     background-position: 50% 50%;
+                     background-size: cover;
+                    }
+                  </style>
+                    <h1>{{news[new+4].title}}</h1>
+                    <p>{{news[new+4].title_text}}</p>
+                    <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+4}}" role="button">Подробнее</a></p>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-6 col-xs-12">
+                 <div class="jumbotron new-block jumbotron-6"
+                 >
+                 <style parse-style>
+                   .jumbotron-6{
+                    background-image: url('images/news/{{news[new+5].img}}');
+                    background-position: 50% 50%;
+                    background-size: cover;
+                   }
+                 </style>
+                   <h1>{{news[new+5].title}}</h1>
+                   <p>{{news[new+5].title_text}}</p>
+                   <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+5}}" role="button">Подробнее</a></p>
+                 </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-xs-12">
+                <div class="jumbotron new-block jumbotron-7"
+                >
+                <style parse-style>
+                  .jumbotron-7{
+                   background-image: url('images/news/{{news[new+6].img}}');
+                   background-position: 50% 50%;
+                   background-size: cover;
+                  }
+                </style>
+                  <h1>{{news[new+6].title}}</h1>
+                  <p>{{news[new+6].title_text}}</p>
+                  <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+6}}" role="button">Подробнее</a></p>
+                </div>
+             </div>
+             <div class="col-sm-12 col-md-6 col-xs-12">
+               <div class="jumbotron new-block jumbotron-8"
+               >
+               <style parse-style>
+                 .jumbotron-8{
+                  background-image: url('images/news/{{news[new+7].img}}');
+                  background-position: 50% 50%;
+                  background-size: cover;
+                 }
+               </style>
+                 <h1>{{news[new+7].title}}</h1>
+                 <p>{{news[new+7].title_text}}</p>
+                 <p><a class="btn btn-primary btn-lg" href="news_view.php?priority_new={{new+7}}" role="button">Подробнее</a></p>
+               </div>
+            </div>
 							</div>
 						</div>
 					</div>

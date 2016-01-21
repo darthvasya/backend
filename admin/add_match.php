@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.css" media="screen" title="no title" charset="utf-8">
 
 
     <!--for datapicker-->
@@ -41,7 +41,7 @@
     <ul class="nav nav-pills">
       <li><a href="index.php">Home admin</a></li>
       <li><a href="#">Sait</a></li>
-      <li class="active"><a href="image.php">Image</a></li>
+      <li><a href="image.php">Image</a></li>
       <li  class="active"><a href="add_match.php">Add match</a></li>
     </ul>
 <?php

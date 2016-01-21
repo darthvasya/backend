@@ -35,7 +35,7 @@ app.controller('customersCtrl', function($scope, $http) {
 
 
     var  myUrl= '#tab3';
-  	$scope.test = 0;
+  	$scope.test = 2;
 
   	$scope.url = myUrl;
 
