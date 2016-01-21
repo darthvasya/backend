@@ -19,12 +19,139 @@
 	    <script src="js/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
+    <style>
+    #loading{
+    	background-color: #17607d;
+    	height: 100%;
+    	width: 100%;
+    	position: fixed;
+    	z-index: 99999;
+    	margin-top: 0px;
+    	top: 0px;
+    }
+    #loading-center{
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+    	}
+    #loading-center-absolute {
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	height: 200px;
+    	width: 200px;
+    	margin-top: -100px;
+    	margin-left: -100px;
+    	-ms-transform: rotate(-135deg);
+       	-webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
 
+    }
+    .object{
+
+    	-moz-border-radius: 50% 50% 50% 50%;
+    	-webkit-border-radius: 50% 50% 50% 50%;
+    	border-radius: 50% 50% 50% 50%;
+    	position: absolute;
+    	border-top: 5px solid #FFF;
+    	border-bottom: 5px solid transparent;
+    	border-left:  5px solid #FFF;
+    	border-right: 5px solid transparent;
+
+    	-webkit-animation: animate 2s infinite;
+    	animation: animate 2s infinite;
+
+    	}
+
+
+    #object_one{
+    	left: 75px;
+    	top: 75px;
+    	width: 50px;
+    	height: 50px;
+    	}
+
+    #object_two{
+    	left: 65px;
+    	top: 65px;
+    	width: 70px;
+    	height: 70px;
+    	-webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+    	}
+
+    #object_three{
+    	left: 55px;
+    	top: 55px;
+    	width: 90px;
+    	height: 90px;
+    	-webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+    	}
+    #object_four{
+    	left: 45px;
+    	top: 45px;
+    	width: 110px;
+    	height: 110px;
+    	-webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+
+    	}
+
+    @-webkit-keyframes animate {
+
+
+    50% {
+
+    	-ms-transform: rotate(360deg) scale(0.8);
+       	-webkit-transform: rotate(360deg) scale(0.8);
+        transform: rotate(360deg) scale(0.8);
+      }
+
+
+
+    }
+
+    @keyframes animate {
+
+    50% {
+
+    	-ms-transform: rotate(360deg) scale(0.8);
+       	-webkit-transform: rotate(360deg) scale(0.8);
+        transform: rotate(360deg) scale(0.8);
+      }
+
+    	}
+
+
+
+
+    </style>
 
 
 </head><!--/head-->
 
 <body>
+
+
+  <div id="loading">
+    <div id="loading-center">
+      <div id="loading-center-absolute">
+        <div class="object" id="object_four"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_two"></div>
+        <div class="object" id="object_one"></div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+$(window).load(function() {
+$("#loading").fadeOut(500);
+})
+</script>
+
+
 	<header id="header" role="banner">
 		<div class="main-nav">
 			<div class="container">
@@ -232,23 +359,23 @@
 
                  <div ng-show="desk[test+1].foto==1" class="match-photo-left match-photo hide animated fadeInLeft">
 
-                   <img width="128" height="128" src="images/news/1_1.jpg" alt="" />
-                   <img width="128" height="128" src="images/news/1_2.jpg" alt="" />
-                   <img width="128" height="128" src="images/news/1_3.jpg" alt="" />
-                   <img width="128" height="128" src="images/news/1_4.jpg" alt="" />
-                   <img width="128" height="128" src="images/news/1_5.jpg" alt="" />
-                   <img width="128" height="128" src="images/news/1_6.jpg" alt="" />
+                   <img width="128" height="128" src="images/news/{{desk[test+1].photo1}}" alt="" />
+                   <img width="128" height="128" src="images/news/{{desk[test+1].photo2}}" alt="" />
+                   <img width="128" height="128" src="images/news/{{desk[test+1].photo3}}" alt="" />
+                   <img width="128" height="128" src="images/news/{{desk[test+1].photo4}}" alt="" />
+                   <img width="128" height="128" src="images/news/{{desk[test+1].photo5}}" alt="" />
+                   <img width="128" height="128" src="images/news/{{desk[test+1].photo6}}" alt="" />
                  </div>
                 </div>
 
                 <div class="right-new-brick">
                   <div ng-show="desk[test].foto==1" class="match-photo-right  match-photo  animated fadeInRight">
-                      <img width="128" height="128" src="images/news/1_1.jpg" alt="" />
-                      <img width="128" height="128" src="images/news/1_2.jpg" alt="" />
-                      <img width="128" height="128" src="images/news/1_3.jpg" alt="" />
-                      <img width="128" height="128" src="images/news/1_4.jpg" alt="" />
-                      <img width="128" height="128" src="images/news/1_5.jpg" alt="" />
-                      <img width="128" height="128" src="images/news/1_6.jpg" alt="" />
+                    <img width="128" height="128" src="images/news/{{desk[test].photo1}}" alt="" />
+                    <img width="128" height="128" src="images/news/{{desk[test].photo2}}" alt="" />
+                    <img width="128" height="128" src="images/news/{{desk[test].photo3}}" alt="" />
+                    <img width="128" height="128" src="images/news/{{desk[test].photo4}}" alt="" />
+                    <img width="128" height="128" src="images/news/{{desk[test].photo5}}" alt="" />
+                    <img width="128" height="128" src="images/news/{{desk[test].photo6}}" alt="" />
 
 
                   </div>
